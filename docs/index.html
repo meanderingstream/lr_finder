@@ -1,0 +1,123 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+        <title>Learning Rate Finder</title>
+        <link rel="stylesheet" href="./css/reveal.css">
+        <link rel="stylesheet" href="./css/theme/moon.css" id="theme">
+        <link rel="stylesheet" href="./css/highlight/zenburn.css">
+        <link rel="stylesheet" href="./css/print/paper.css" type="text/css" media="print">
+
+
+    </head>
+    <body>
+
+        <div class="reveal">
+            <div class="slides"><section  data-markdown><script type="text/template">
+## Intro
+
+Scott Mueller
+
+###### smueller.tampa.ai@gmail.com
+</script></section><section  data-markdown><script type="text/template">## Tampa.ai
+
+Looking for Presenters
+
+</script></section><section  data-markdown><script type="text/template">## A disciplined approach to neural network hyper-parameters: Part 1 – learning rate, batch size, momentum, and weight decay
+
+https://arxiv.org/abs/1803.09820
+
+</script></section><section  data-markdown><script type="text/template">* Super Convergence
+* R1: Unreasonable Effectiveness of Validation/Test Loss
+* R2: Horizontal Part of Test Loss
+* Underfitting
+* Overfitting
+* Cyclical Learning Rates
+</script></section><section  data-markdown><script type="text/template">* R3: Amount of Regularization Must Be Balanced
+* R4: Highest Performance Minimizing Computational Time
+* R5: Optimial Momentum Improves Network Training
+* R6: Weight Decay is Key Knob for Tuning Regularization
+* Short Recipe
+</script></section><section  data-markdown><script type="text/template">## Super Convergence
+<img src="./images/LRvsCLRresnet56.png"  height="500">
+</script></section><section  data-markdown><script type="text/template">## One Cycle
+<img src="./images/imagenetInceptionSC2.png"  height="500">
+</script></section><section  data-markdown><script type="text/template">## R1: THE UNREASONABLE EFFECTIVENESS OF VALIDATION/TEST LOSS
+<img src="./images/NormalFatherSon.JPG"  height="500">
+</script></section><section  data-markdown><script type="text/template">## R2: Horizontal Part of Test Loss
+<img src="./images/FatherSon.jpg"  width="500">
+</script></section><section  data-markdown><script type="text/template">## Underfitting
+<img src="./images/bears.png"  width="500">
+</script></section><section  data-markdown><script type="text/template">## Overfitting
+</script></section><section  data-markdown><script type="text/template">## R3: Amount of Regularization Must Be Balanced
+</script></section><section  data-markdown><script type="text/template">## R4: Highest Performance Minimizing Computational Time
+<img src="./images/zach_zane.jpg"  width="500">
+</script></section><section  data-markdown><script type="text/template">## R5: Optimial Momentum Improves Network Training
+
+<img src="./images/RingNeck.jpg"  width="500">
+</script></section><section  data-markdown><script type="text/template">## R6: Weight Decay is Key Knob for Tuning Regularization
+<img src="./images/ColabNotebook.png"  width="500">
+</script></section><section  data-markdown><script type="text/template">## Short Recipe
+<img src="./images/making_folders.png"  width="500">
+</script></section><section  data-markdown><script type="text/template">
+[Knowfalls.com](https://knowfalls.com/team.html)
+
+Looking for Founder Engineers
+
+Elixir, Functional Programming, Rails, Experience
+</script></section></div>
+        </div>
+
+        <script src="./lib/js/head.min.js"></script>
+        <script src="./js/reveal.js"></script>
+
+        <script>
+            function extend() {
+              var target = {};
+              for (var i = 0; i < arguments.length; i++) {
+                var source = arguments[i];
+                for (var key in source) {
+                  if (source.hasOwnProperty(key)) {
+                    target[key] = source[key];
+                  }
+                }
+              }
+              return target;
+            }
+
+            // Optional libraries used to extend on reveal.js
+            var deps = [
+              { src: './lib/js/classList.js', condition: function() { return !document.body.classList; } },
+              { src: './plugin/markdown/marked.js', condition: function() { return !!document.querySelector('[data-markdown]'); } },
+              { src: './plugin/markdown/markdown.js', condition: function() { return !!document.querySelector('[data-markdown]'); } },
+              { src: './plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+              { src: './plugin/zoom-js/zoom.js', async: true },
+              { src: './plugin/notes/notes.js', async: true },
+              { src: './plugin/math/math.js', async: true }
+            ];
+
+            // default options to init reveal.js
+            var defaultOptions = {
+              controls: true,
+              progress: true,
+              history: true,
+              center: true,
+              transition: 'default', // none/fade/slide/convex/concave/zoom
+              dependencies: deps
+            };
+
+            // options from URL query string
+            var queryOptions = Reveal.getQueryHash() || {};
+
+            var options = {"transition":"fade"};
+            options = extend(defaultOptions, options, queryOptions);
+        </script>
+
+
+        <script>
+          Reveal.initialize(options);
+        </script>
+    </body>
+</html>
