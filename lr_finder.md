@@ -157,3 +157,7 @@ Easier to determine best WD from test loss
 Looking for Founder Engineers
 
 Elixir, Functional Programming, Rails, Experience
+
+---
+
+https://iconof.com/1cycle-learning-rate-policy
