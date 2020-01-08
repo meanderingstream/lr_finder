@@ -161,3 +161,8 @@ Elixir, Functional Programming, Rails, Experience
 ---
 
 https://iconof.com/1cycle-learning-rate-policy
+
+---
+Early Fast.ai V2 Walkthrough Lessons
+
+https://forums.fast.ai/t/a-walk-with-fastai2-study-group-and-online-lectures-megathread/59929
